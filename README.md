@@ -11,8 +11,8 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone https://github.com/AmiJP/leonardo-ai-challenge.git
+   cd leonardo-ai-challenge
    ```
 
 2. **Update `.env` and `.env.test` files:**
@@ -28,21 +28,16 @@
      DATABASE_URL="postgresql://your_username:your_password@localhost:5432/testdb"
      ```
 
-3. **Create a `.env.test` file in the project root directory with the following variable:** (Replace with your username & password)
+3. **Apply database migrations:**
 
-   ```dotenv
-   DATABASE_URL="postgresql://username:password@localhost:5432/testdb"
+   ```bash
+   npx prisma migrate dev
    ```
 
-4. **Apply database migrations:**
+4. **Install the necessary dependencies:**
 
    ```bash
    npm install
-   ```
-
-5. **Install the necessary dependencies:**
-   ```bash
-   npx prisma migrate dev
    ```
 
 ### Running the Project
